@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Sorrel Brae works</title>
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      header { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1rem; max-width: 44rem; margin: 0 auto; }
+      .mark { font-weight: 700; color: #2f7d4f; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      header a { color: #2f7d4f; font-size: 10px; }
+      main { max-width: 44rem; margin: 0 auto; padding: 1rem 0; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem); margin: 0 1rem 1rem;
+        background: linear-gradient(90deg, #2f7d4f, #c24d9b);
+        -webkit-background-clip: text; background-clip: text;
+        color: transparent; -webkit-text-fill-color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no background or padding. */
+      .lede { margin: 0; padding: 0; font-size: 1.1rem; line-height: 1.5; max-width: none; }
+      /* Intentional, for Impeccable's test drive: low-contrast grey text on a light background. */
+      .note { color: #c8c8c4; margin: 1rem; }
+      .steps { list-style: none; margin: 1.5rem 1rem; padding: 0; display: grid; gap: 0.75rem; }
+      .steps li { padding: 1rem; border: 1px solid #e5e5e0; border-radius: 0.5rem; background: #fff; }
+      .steps strong { display: block; margin-bottom: 0.25rem; }
+      /* Intentional, for Impeccable's test drive: hard-coded colour outside the site's palette, and a layout-property transition. */
+      .bar { height: 0.6rem; width: 40%; background: #ff6a00; border-radius: 0.3rem; transition: width 0.3s; margin: 1rem; }
+      .bar:hover { width: 90%; }
+      footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; color: #555; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span class="mark">Sorrel Brae</span>
+      <a href="/">Back to the landing page</a>
+    </header>
+    <main>
+      <h1>How Sorrel Brae works</h1>
+      <p class="lede">Sorrel Brae keeps one shared list for the whole team, and every change shows up on the landing page as soon as it is saved.</p>
+      <p class="note">The list shows the five most recent entries, newest first, and finished items carry a tick.</p>
+      <ul class="steps">
+        <li><strong>1. Add an item</strong>Anyone on the team writes a short title and saves it to the shared list.</li>
+        <li><strong>2. Tick it off</strong>Finished items are marked done and stay visible with a check mark.</li>
+        <li><strong>3. See it live</strong>The landing page reads the list directly, so nothing needs refreshing by hand.</li>
+      </ul>
+      <div class="bar" role="img" aria-label="Progress: two of five items done"></div>
+    </main>
+    <footer>Sorrel Brae · one page, one list</footer>
+  </body>
+</html>
